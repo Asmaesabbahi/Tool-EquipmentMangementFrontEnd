@@ -1,0 +1,109 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="form-body">
+      <div class="row">
+          <div class="form-holder">
+              <div class="form-content">
+                  <div class="form-items">
+                    <h3>Update Printer</h3>
+                    <p>Fill the data below.</p>
+                    <form [formGroup]="userForm">
+
+                        <div class="col-md-12">
+                            <label>Brand :</label>
+                           <input class="form-control" type="text" name="name" formControlName="brand" placeholder="brand" [value]="printer.brand" required>
+                           <div class="valid-feedback">Username field is valid!</div>
+                           <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+                        <div class="col-md-12">
+                            <br>
+                           <label>Model :</label>
+                           <input class="form-control" type="text" name="name" formControlName="model" placeholder="model" [value]="printer.model" required>
+                           <div class="valid-feedback">Username field is valid!</div>
+                           <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+                        <div class="col-md-12">
+                            <br>
+                            <label>Aquired in :</label>
+                            <input class="form-control" type="date" name="dateRequis" formControlName="dateRequis" placeholder="Date" [value]="printer.dateRequis" required>
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                         </div>
+                         <div class="col-md-12 row">
+                            <div class="col-md-6">
+                                <br>
+                                <label for="type">Type:</label>
+                                <br>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" formControlName="type" id="Bought" value="Bought" name="type">
+                                    <label class="custom-control-label" for="Bought">Bought</label>
+                                  </div>
+                                  
+                                  <!-- Default inline 2-->
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" formControlName="type" id="Rented" value="Rented" name="type">
+                                    <label class="custom-control-label" for="Rented">Rented</label>
+                                  </div>
+                            </div>
+                            
+                        <div class="col-md-6">
+                            <br>
+                            <label for="etatToner">State Toner :</label>
+                            <br>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" formControlName="etatToner" id="Empty" value="Empty" name="etatToner">
+                                <label class="custom-control-label" for="Empty">Empty</label>
+                              </div>
+                              
+                              <!-- Default inline 2-->
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" formControlName="etatToner" id="Full" value="Full" name="etatToner">
+                                <label class="custom-control-label" for="Full">Full</label>
+                              </div>
+                         </div>
+                        </div>
+                        <div class="col-md-12">
+                          <br>
+                            <label>Type Toner :</label>
+                            <div id="textSelectdiv">
+                            <select id="textSelect" class="select" style="display: inline;">
+                              <option value="1">None</option>
+                              <option value="2">BR-6787</option>
+                              <option value="3">BV-7565</option>
+                              <option value="4">NU-67587</option>
+                            </select>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="col-md-12">
+                            <br>
+                            <label>State:</label>
+                            <select [(ngModel)]="state" formControlName="state" class="select form-control" name="state" style="display: inline;">
+                              <option *ngFor="let o2 of options2">
+                                 {{o2.name}}
+                              </option>
+                           </select>
+                        </div>
+                        <div class="form-button col-md-12">
+                            <br>
+                            <button id="submit" type="submit" class="btn btn-primary" (click)="updatePrinter()" >Update</button>
+                            <button id="submit" type="reset" class="btn btn-primary" id="reset">Reset</button>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  <footer><app-footer></app-footer></footer>
+  </body>
+  </html>
+    

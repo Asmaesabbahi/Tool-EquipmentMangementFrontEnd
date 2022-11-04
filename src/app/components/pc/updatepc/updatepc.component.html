@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
+<body>
+<app-navbar></app-navbar>
+<div class="container">
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Update Pc</h3>
+                    <p>Fill the data below.</p>
+                    <form [formGroup]="userForm">
+                        <div class="row">
+                        <div class="col-sm-6">
+                            <label>Brand :</label>
+                           <input class="form-control" type="text" name="name" formControlName="brand" placeholder="brand" [value]="pc.brand" required>
+                           <div class="valid-feedback">Username field is valid!</div>
+                           <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+                        <div class="col-sm-6">
+                           <label>Model :</label>
+                           <input class="form-control" type="text" name="name" formControlName="model" placeholder="model" [value]="pc.model" required>
+                           <div class="valid-feedback">Username field is valid!</div>
+                           <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+                      </div>
+                        
+                          <br>
+                        <div class="row">
+                          <div class="col-sm-6">
+                         <label>OS Name :</label>
+                         <input class="form-control" type="text" name="name"  formControlName="osName" placeholder="osName" [value]="pc.osName" required>
+                         <div class="valid-feedback">Username field is valid!</div>
+                         <div class="invalid-feedback">Username field cannot be blank!</div>
+                         </div>
+                        
+                        <div class="col-sm-6">
+                         <label>OS Version :</label>
+                         <input class="form-control" type="text" name="name" formControlName="osVersion" placeholder="osVersion" [value]="pc.osVersion" required>
+                         <div class="valid-feedback">Username field is valid!</div>
+                         <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-6">
+                         <label>system Type :</label>
+                         <input class="form-control" type="text" name="name" formControlName="systemType" placeholder="systemType" [value]="pc.systemType" required>
+                         <div class="valid-feedback">Username field is valid!</div>
+                         <div class="invalid-feedback">Username field cannot be blank!</div>
+                          </div>
+                          <div class="col-sm-6">
+                         <label>OS Manufacterer :</label>
+                         <input class="form-control" type="text" name="name" formControlName="osManufacterer" placeholder="osManufacterer" [value]="pc.osManufacterer" required>
+                         <div class="valid-feedback">Username field is valid!</div>
+                         <div class="invalid-feedback">Username field cannot be blank!</div>
+                         </div>
+                         </div>
+
+                         <div class="row">
+                          <div class="col-sm-6">
+                         <label>processor Type :</label>
+                         <input class="form-control" type="text" name="name" formControlName="processorType" [value]="pc.processorType" placeholder="processorType" required>
+                         <div class="valid-feedback">Username field is valid!</div>
+                         <div class="invalid-feedback">Username field cannot be blank!</div>
+                         </div>
+                         <div class="col-sm-6">
+                         <label>bios Version :</label>
+                         <input class="form-control" type="text" name="name" formControlName="biosVersion" [value]="pc.biosVersion" placeholder="biosVersion" required>
+                         <div class="valid-feedback">Username field is valid!</div>
+                         <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-6">
+                         <label>ram :</label>
+                         <input class="form-control" type="text" name="name" formControlName="ram" [value]="pc.ram" placeholder="ram" required>
+                         <div class="valid-feedback">Username field is valid!</div>
+                         <div class="invalid-feedback">Username field cannot be blank!</div>
+                         </div>
+                         <div class="col-sm-6">
+                         <label>disk :</label>
+                         <input class="form-control" type="text" name="name" formControlName="disk" [value]="pc.disk" placeholder="disk" required>
+                         <div class="valid-feedback">Username field is valid!</div>
+                         <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label>State:</label>
+                            <select [(ngModel)]="state" formControlName="state" class="select form-control" [value]="pc.state" name="state" style="display: inline;">
+                              <option *ngFor="let o2 of options2">
+                                 {{o2.name}}
+                              </option>
+                           </select>
+                        </div>
+                        <div class="col-sm-6">
+                          <label>Type:</label>
+                          <select [(ngModel)]="typePC" formControlName="typePC" class="select form-control" [value]="pc.typePC" name="typePC" style="display: inline;">
+                            <option *ngFor="let o of options">
+                               {{o.name}}
+                            </option>
+                         </select>
+                        </div>
+                      </div>
+                      <div class="col-md-12 row">
+                        <br>
+                        <label>Aquired in :</label>
+                        <input class="form-control" type="date" name="name" formControlName="dateRequis" placeholder="dateRequis" required>
+                        <div class="valid-feedback">Username field is valid!</div>
+                        <div class="invalid-feedback">Username field cannot be blank!</div>
+                     </div>
+                        <div class="form-button col-md-12">
+                            <br>
+                            <button id="submit" type="submit" class="btn btn-primary " (click)="updatePc()">Update</button>
+                            <button id="submit" type="reset" class="btn btn-primary" id="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<footer><app-footer></app-footer></footer>
+</body>
+
+
+</html>

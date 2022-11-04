@@ -1,0 +1,143 @@
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    </head>
+<body>
+<app-navbar></app-navbar>
+    <!------------------------->
+    <!--======Push Menu======-->
+<div class="title" id="space">
+    <br>
+    <h1>Computer Details</h1>
+</div>
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="../../../../assets/img/computer.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h3>
+                                        {{pc.brand}}
+                                    </h3>
+                                    <h5>
+                                        {{pc.typePC}}
+                                    </h5>
+                                    <p class="proile-rating">&nbsp;</p>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Device Specifications</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">OS Specifications</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div>
+                        <input type="submit" class="profile-edit-btn" (click)="updatePc()" name="btnAddMore" value="Edit Info"/>
+                        </div>
+                        <div>
+                            <input id="delete" type="submit" class="profile-edit-btn" name="btnAddMore" (click)="deletePc()" value="Delete Pc"/>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>{{pc.brand}}</p>
+                            <a >System Model : {{pc.model}}</a><br/>
+                            <a >Pc Type : {{pc.typePC}}</a><br/>
+                            <a >Aquired in : {{pc.dateRequis}}</a><br/>
+                            <a >PC State : {{pc.state}}</a><br/>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Bios Version</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{pc.biosVersion}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>System Type</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{pc.systemType}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Processor</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{pc.processorType}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>RAM</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{pc.ram}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Local Disk Space</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{pc.disk}}</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>OS Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{pc.osName}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>OS Version</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{pc.osVersion}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>OS Manufacturer</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{pc.osManufacterer}}</p>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+<!------------------------>
+</body>
+<footer><app-footer></app-footer></footer>
+</html>

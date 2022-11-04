@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+</head>
+<body>
+<app-navbar></app-navbar>
+<div class="container">
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Update Toner</h3>
+                    <p>Fill the data to change toner information.</p>
+                    <form class="requires-validation" novalidate>
+
+                        <div class="col-md-12">
+                            <label>Toner Type :</label>
+                           <input class="form-control" type="text" name="name" placeholder="Type" required>
+                           <div class="valid-feedback">Username field is valid!</div>
+                           <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <br>
+                            <label>Toner Quantity:</label>
+                            <input class="form-control" type="number" id="quantity" name="quantity" placeholder="Quantity" required>
+                             <div class="valid-feedback">Email field is valid!</div>
+                             <div class="invalid-feedback">Email field cannot be blank!</div>
+                        </div>
+
+                        <div class="form-button col-md-12">
+                            <br>
+                            <button id="submit" type="submit" class="btn btn-primary ">Update</button>
+                            <button id="submit" type="reset" class="btn btn-primary" id="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

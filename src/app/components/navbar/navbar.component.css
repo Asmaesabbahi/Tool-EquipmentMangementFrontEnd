@@ -1,0 +1,7 @@
+#sidebarCollapse {
+   background-color:black;
+}
+.dropdown-item:hover{
+   background-color: black ;
+   color: white;
+}

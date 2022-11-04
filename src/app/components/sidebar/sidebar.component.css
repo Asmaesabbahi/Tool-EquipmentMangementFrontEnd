@@ -1,0 +1,78 @@
+body {
+    background-color: #f16565;
+  }
+  @media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 40px 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgba(150, 66, 66, 0.05), 0 2px 10px 0 rgba(212, 95, 95, 0.05);
+    width: 0px;
+    z-index: 600;
+    background: linear-gradient(#1c4249, #61d8f0,#1c4249);
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(17, 17, 17, 0.16), 0 2px 10px 0 rgba(77, 72, 68, 0.12);
+    width: 0;
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    width: 0;
+    height: calc(100vh - 200px);
+    padding-top: 0.2rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  #list{
+    background-color:#ffa900;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+  #list:hover{
+      background-color: rgb(34, 33, 33);
+      color: aliceblue;
+  }
+  span{
+    font-size: larger;
+  }
+  #SidebarMenu{
+    width: 0;
+  }
+
+  .dismiss {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    transition: all .3s;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+ }
+ 
+ .dismiss:hover,
+ .dismiss:focus {
+  background-color: rgb(34, 33, 33);
+  color: rgb(161, 50, 50);
+ }

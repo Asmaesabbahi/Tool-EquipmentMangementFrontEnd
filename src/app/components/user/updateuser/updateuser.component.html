@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <app-navbar></app-navbar>
+        <div id="booking" class="section">
+            <div class="section-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="booking-form">      
+                 <form  [formGroup]="userForm">
+                    <div class="form-group row">
+                        <span class="form-label col-md-3">Name</span>
+                        <input class="form-control col-sm-9" type="text" formControlName="name" placeholder="Enter name" [value]="user.name">
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                        <span class="form-label  col-md-3">Last Name</span>
+                        <input class="form-control  col-sm-9" type="text" formControlName="lastname" placeholder="Enter last name" [value]="user.lasteName">
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                    <span class="form-label  col-md-3">Phone</span>
+                    <input class="form-control  col-sm-9" type="tel" formControlName="tele" placeholder="Enter number" [value]="user.tele">
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                        <span class="form-label  col-md-3">Email</span>
+                        <input class="form-control  col-sm-9" type="email" formControlName="email" placeholder="Enter email" [value]="user.email">
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                        <span class="form-label  col-sm-3">Poste</span>
+                        <input class="form-control  col-sm-9" formControlName="poste" type="text" placeholder="Enter username" [value]="user.poste">
+                    </div>
+                    <hr>
+                    <div class="form-btn">
+                        <div class="row">
+                        <div class="col-sm-6">
+                        <button class="submit-btn" type="submit" (click)="updateAdmin()">Update User</button>
+                        </div>
+                        <div class="col-sm-6">
+                        <button class="submit-btn" type="reset" >reset</button>
+                        </div>
+                        </div>
+                    </div>
+                 </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </body>
+<footer><app-footer></app-footer></footer>
+</html>

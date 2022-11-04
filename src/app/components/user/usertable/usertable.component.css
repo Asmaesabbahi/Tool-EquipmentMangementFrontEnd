@@ -1,0 +1,47 @@
+.card{
+    background-color: black;
+    border-radius:  300px;
+    width: 500px;
+    
+}
+#table{
+    margin-left: 60px;
+    margin-top: 10px;
+    background-color: #fcfcfc;
+    width: 1500px;
+    text-align: center;
+}
+body {
+    background: linear-gradient(#1c4249, #61d8f0,#1c4249);
+    margin-top: 55px;
+    margin-left: 0;
+    /**overflow-y: scroll;*/
+    /*background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 100%);*/
+  }
+
+ h1{
+      text-align: center;
+      margin-left: 500px;
+      color: black;
+      font: large, bold;
+  }
+  .thead{
+      background-color: black;
+  }
+  .card-header, .card-footer{
+      background-color: #ffa900;
+      height: 60px;
+  }
+
+  .btn-warning{
+    margin-left: 60px;
+    margin-bottom: 0px;
+    color : white;
+  }
+
+  #idAdmin{
+      display: none;
+  }
+
+
+  

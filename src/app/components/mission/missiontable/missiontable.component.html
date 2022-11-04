@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    </head>
+<body>
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <p ><br></p><h1 id="title">Mission List<br><br></h1></div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let m of missions">
+            <div class="card p-0">
+                <div class="card-image">
+                    <img src="../../../../assets/img/goal.png"
+                        alt="">
+
+                </div>
+                <div class="card-content d-flex flex-column align-items-center">
+                    <h4 class="pt-2">{{m.title}}</h4>
+                    <h5>{{m.desciption}}</h5>
+
+                    <ul class="social-icons d-flex justify-content-center">
+                        <li style="--i:1">
+                            <a (click)="detailsmission(m.msid)">
+                                <span class="fas fa-angle-double-right"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <div class="col-lg-4" id="button">
+            <button type="button" class="btn btn-light" routerLink="/addmission">Add Mission</button>
+    </div>
+<!------------------------>
+</body>
+<footer><app-footer></app-footer></footer>

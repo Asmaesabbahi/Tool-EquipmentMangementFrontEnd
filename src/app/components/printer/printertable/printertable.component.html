@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+</head>
+<body>
+<app-navbar></app-navbar>
+<!------------------------->
+<!--======Push Menu======-->
+<div class="container bar-cont push-bar">
+</div>
+<!------------------------->
+<!--========Cards========-->
+<h1 class="creator">Printer List</h1>
+<div class="container-fluid main-cont">
+    <div class="justify-content-center ">
+        <button type="button" class="btn news-block" id="addbutton" routerLink="/addprinter">Add Printer</button>
+      </div>
+    <div class="row news-row">
+        <div class="container-fluid col-md-12 col-sm-6 justify-content-center news-block">
+            <div class="card-group">
+              <div class="underlay" *ngFor="let printer of printers">
+                <a (click)="detailsprinter(printer.mid)">
+                  <div class="card">/
+                      <div class="card-img-top" style="background-image: url('../../../../assets/img/printer.png')"></div>
+                      <div class="card-block" >
+                      <h5 class="card-title" style="font-family: 'Anton', sans-serif">{{printer.model}}<hr></h5>
+                      <p class="card-text">Printer : {{printer.model}} &nbsp;&nbsp;&nbsp;<u>...read more</u></p>
+                      </div>
+                  </div>
+                </a>
+              </div>
+              </div>
+        </div>
+    </div>
+    
+</div>
+
+<!------------------------>
+</body>
+<footer><app-footer></app-footer></footer>
+</html>
